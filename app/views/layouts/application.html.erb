@@ -8,12 +8,7 @@
 
 </head>
 <body>
-<div class="btn home-btn">
-  <%= link_to "home", root_url %>
-</div>
-<div class="btn login-btn">
-  <%= link_to "log in", new_session_url %>
-</div>
+<%= render partial: '/layouts/navbar' %>
 
 <%= render partial: '/layouts/flash', locals: { flash: flash } %>
 

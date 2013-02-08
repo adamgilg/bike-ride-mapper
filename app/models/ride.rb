@@ -7,4 +7,8 @@ class Ride < ActiveRecord::Base
 
   belongs_to :user
   has_many :completed_rides
+
+  def rides_per_user
+
+  end
 end

@@ -1,0 +1,18 @@
+<h1>SO MANY RIDES</h1>
+<div class='row'>
+  <% @rides.each do |ride| %>
+    <div class='span3 ride-story'>
+      <%= link_to ride_url(ride.id) do %>
+        <div class="well">
+          <strong><%= ride.title %></strong>
+          <br>
+          <%= ride.description %>
+          <br>
+          <em>added by: <%= ride.user.name %></em>
+          <br>
+          <em><%= time_ago_in_words(ride.created_at) %> ago</em>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

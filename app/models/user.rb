@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
 
   def reset_token
     self.token = SecureRandom.urlsafe_base64
-    self.save
+    self.save!
   end
 
   def delete_token

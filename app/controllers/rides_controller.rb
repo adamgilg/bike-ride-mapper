@@ -16,6 +16,10 @@ class RidesController < ApplicationController
     end
   end
 
+  def index
+    @rides = Ride.all
+  end
+
   def show
   end
 end
