@@ -5,6 +5,7 @@
   </div>
   <div class="span4 user-story">
     <h3><%= @user.name %>'s rides</h3>
+    <%= link_to "add new ride", new_ride_path, class: "btn" %>
     <ol>
       <% @user.rides.each do |ride| %>
         <li>

@@ -15,6 +15,10 @@
   <%= link_to "log in", new_session_url %>
 </div>
 
+<%= render partial: '/layouts/flash', locals: { flash: flash } %>
+
+
+
 <%= yield %>
 
 </body>

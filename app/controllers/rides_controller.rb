@@ -6,11 +6,12 @@ class RidesController < ApplicationController
 
   def create
     @ride = Ride.new(params[:ride])
+    # flash[:notice] = [] if flash[:notice].nil?
     if @ride.save
-      flash[:success] = "keep pedaling! everything is a-okay."
+      flash[:success] = "keep pedaling! your ride was saved."
       redirect_to root_path
     else
-      flash[:error] = "stop pedaling - we've got a problem."
+      flash[:error] = "stop pedaling - your ride was missing something"
       render :new
     end
   end
