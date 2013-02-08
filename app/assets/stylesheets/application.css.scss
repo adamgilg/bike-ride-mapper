@@ -1,0 +1,18 @@
+/*
+*= require_self
+*/
+@import 'bootstrap';
+
+body {
+  width: 95%;
+  margin: auto;
+  font-family: 'Arial';
+}
+
+.user-story {
+  font-family: 'Futura', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 10px;
+}

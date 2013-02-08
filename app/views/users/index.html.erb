@@ -1,0 +1,13 @@
+<h1>ALL YOUR USER</h1>
+  <% @users.each do |user| %>
+    <div class="row">
+      <div class="span4">
+        <%= link_to image_tag(photo_user_path(user.id)), user %>
+      </div>
+      <div class="span2">
+        <%= user.name %>
+        <%= user.email %>
+      </div>
+    </div>
+    <br>
+  <% end %>
