@@ -13,8 +13,20 @@ body {
 }
 
 .ride-story {
+  a {
+    color: black;
+    text-decoration: none
+  }
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.user-box {
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  width: 50%;
 }
 
 .flash {
@@ -29,6 +41,10 @@ body {
   color: red;
 }
 
+.navbar-inner {
+  height: 75px;
+}
+
 .navbar li {
   padding-top: 15px;
 }
@@ -36,7 +52,16 @@ body {
 .navbar .logo {
   padding-top: 0px;
   margin-left: 0px;
-  position: relative;
-  right: 35px;
+}
+
+.header {
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-variant: small-caps;
+}
+
+.ride-text {
+  width: 400px;
 }
 

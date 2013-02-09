@@ -20,8 +20,8 @@ class User < ActiveRecord::Base
     !self.password.nil?
   end
 
-  def reset_token
-    self.token = SecureRandom.urlsafe_base64
+  def reset_session_token
+    self.session_token = SecureRandom.urlsafe_base64
     self.save!
   end
 

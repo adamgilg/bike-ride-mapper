@@ -4,14 +4,16 @@
     <%= image_tag photo_user_path(@user) %>
   </div>
   <div class="span4 ride-story">
+    <% logged_in_user = true if @current_user && @current_user.session_token == @user.session_token %>
+    <%= link_to "add new ride", new_ride_path, class: "btn" if logged_in_user %>
     <h3><%= @user.name %>'s rides</h3>
-    <%= link_to "add new ride", new_ride_path, class: "btn" %>
     <ol>
       <% @user.rides.each do |ride| %>
         <li>
-          <strong><%= ride.title %></strong>
+          <strong><%= link_to ride.title, ride_path(ride.id) %></strong>
           <br>
           <%= ride.description %>
+          <%= link_to "delete ride", ride_path(ride), method: :delete, class: "btn btn-danger" if logged_in_user %>
         </li>
       <% end %>
     </ol>

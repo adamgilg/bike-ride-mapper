@@ -1,0 +1,15 @@
+<div class="span4">
+  <div class="header">
+    <%= @ride.title %>
+  </div>
+
+  <div class="ride-text">
+    <em>created by <%= link_to @ride.user.name, user_path(@ride.user.id) %></em>
+    <br>
+    <%= @ride.description %>
+    <br>
+    <%=l @ride.created_at %>
+  </div>
+</div>
+
+

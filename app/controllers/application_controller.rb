@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter
+  before_filter :current_user
 
   def require_login
     unless logged_in?
@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    unless session[:token].nil?
-      @current_user = User.find_by_session_token(session[:token])
+    unless session[:session_token].nil?
+      @current_user = User.find_by_session_token(session[:session_token])
     else
       nil
     end

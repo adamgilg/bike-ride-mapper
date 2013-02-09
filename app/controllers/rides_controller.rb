@@ -21,5 +21,6 @@ class RidesController < ApplicationController
   end
 
   def show
+    @ride = Ride.find(params[:id])
   end
 end

@@ -1,7 +1,7 @@
 <h1>SO MANY RIDES</h1>
 <div class='row'>
   <% @rides.each do |ride| %>
-    <div class='span3 ride-story'>
+    <div class='span3 ride-story ride-box'>
       <%= link_to ride_url(ride.id) do %>
         <div class="well">
           <strong><%= ride.title %></strong>

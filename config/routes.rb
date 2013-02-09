@@ -5,7 +5,7 @@ BikeRides::Application.routes.draw do
     end
   end
   resources :rides
-  resources :sessions
+  resource :sessions
 
 
   root to: 'static_pages#home'

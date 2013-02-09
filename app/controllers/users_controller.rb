@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     photo = params[:user].delete(:photo)
     @user = User.new(params[:user])
-    @user.photo_blob = photo.read
+    @user.photo_blob = photo.read unless photo.nil?
     @user.save!
 
     redirect_to root_url
